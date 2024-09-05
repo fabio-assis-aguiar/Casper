@@ -19,7 +19,7 @@ into the {body} tag of the default.hbs template --}}
                 </span>
             {{/primary_tag}}
             {{#if featured}}
-                <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
+                <span class="post-card-featured">{{> "icons/fire"}} Destaque</span>
             {{/if}}
         </div>
 
@@ -36,11 +36,11 @@ into the {body} tag of the default.hbs template --}}
                 {{#foreach authors}}
                 <li class="author-list-item">
                     {{#if profile_image}}
-                    <a href="{{url}}" class="author-avatar" aria-label="Read more of {{name}}">
+                    {{!-- <a href="{{url}}" class="author-avatar" aria-label="Leia mais de {{name}}"> --}} 
                         <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
-                    </a>
+                    {{!-- </a> --}}
                     {{else}}
-                    <a href="{{url}}" class="author-avatar author-profile-image" aria-label="Read more of {{name}}">{{> "icons/avatar"}}</a>
+                    {{!-- <a href="{{url}}" class="author-avatar author-profile-image" aria-label="Leia mais de {{name}}">{{> "icons/avatar"}}</a> --}}
                     {{/if}}
                 </li>
                 {{/foreach}}
@@ -50,9 +50,9 @@ into the {body} tag of the default.hbs template --}}
                 <h4 class="author-name">{{authors}}</h4>
                 <div class="byline-meta-content">
                     <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                    {{#if reading_time}}
+                    {{!-- {{#if reading_time}}
                         <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
-                    {{/if}}
+                    {{/if}} --}}
                 </div>
             </div>
 
@@ -104,8 +104,8 @@ into the {body} tag of the default.hbs template --}}
         <div class="inner">
             {{#if @custom.email_signup_text}}<h2 class="footer-cta-title">{{@custom.email_signup_text}}</h2>{{/if}}
             <a class="footer-cta-button" href="#/portal" data-portal>
-                <div class="footer-cta-input">Enter your email</div>
-                <span>Subscribe</span>
+                <div class="footer-cta-input">Qual o seu email?</div>
+                <span>Cadastrar</span>
             </a>
         </div>
     </section>
